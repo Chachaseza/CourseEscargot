@@ -1,23 +1,15 @@
 package fr.eni.formation.Bo;
 
 public class Piste {
-	private Integer nbParticipants;
 	private Integer longeur;
 	private String [][]piste;
 	
 	
 	
-	public Piste(Integer nbParticipants, Integer longeur) {
+	public Piste(Integer longeur) {
 		super();
-		this.nbParticipants = nbParticipants;
 		this.longeur = longeur;
 		setPiste();
-	}
-	public Integer getNbParticipants() {
-		return nbParticipants;
-	}
-	public void setNbParticipants(Integer nbParticipants) {
-		this.nbParticipants = nbParticipants;
 	}
 	public Integer getLongeur() {
 		return longeur;
@@ -30,7 +22,7 @@ public class Piste {
 	}
 	public void setPiste() {
 		if(piste==null){
-		this.piste = new String[getNbParticipants()][getLongeur()];
+		this.piste = new String[Course.getNbAdversaires()][getLongeur()];
 		}
 	}
 	
